@@ -1,0 +1,540 @@
+:root{
+    --box-shadow: 0.5rem 1rem rgba(0,0,0,.1);
+      --border: 2rem solid rgba(0,0,0,.1);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+    transition: all .2s linear;
+   
+}
+body{
+    background-color: whitesmoke;
+}
+
+section{
+    padding: 2rem 9%;
+}
+.heading{
+    text-align: center;
+    padding: 2rem 0;
+    padding-bottom:3rem ;
+    font-size: 3.5;
+    color: black;
+}
+.heading span{
+    background-color: orangered;
+    color: #fff;
+    display: inline-block;
+    padding: .5rem 3rem;
+    clip-path: polygon(100% 0, 93% 50%, 100% 90%, 0% 100%, 7% 50%, 0% 0%);
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 1rem 8%;
+    background-color:white;
+   
+}
+.header .logo{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: black;
+
+}
+.header .logo i{
+    color: orangered;
+}
+.header .navbar a{
+    font-size: 1rem;
+    margin: 1.5rem;
+    color:black;
+}
+.header .navbar a:hover{
+    color: orangered;
+}
+#menu-btn{
+    display: none;
+}
+.header .icons div {
+    height: 4.5rem;
+    width:4.5rem ;
+    line-height: 4.5rem;
+    border-radius:.5rem ;
+    background:white;
+    color: black;
+    font-size:2rem;
+    cursor: pointer;
+    margin-right:.3rem;
+    text-align: center;
+}
+.header .icons div:hover{
+    background: orangered;
+    color: white;
+}
+
+.header .search-form{
+    position: absolute;
+    top: 110%;
+    right:-110%;
+    width: 30rem;
+    height: 4.5rem;
+    background-color: white;
+    overflow: hidden;
+    border-radius: .5rem;
+    display: flex;
+    align-self: center;
+}
+.header .search-form.active{
+    right: 2rem;
+    transition: .4s linear;
+}
+.header .search-form input{
+    height: 100%;
+    width: 100%;
+    background: none;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: black;
+    padding: var(0 1.5rem);
+}
+.header .search-form label{
+    font-size: 1.4rem;
+    padding: 1.4rem;
+    color: black;
+    cursor: pointer;
+}
+.header .search-form label:hover{
+    color: orangered;
+}
+.header .shopping-cart{
+    position: absolute;
+    top: 110%;
+    right:-110%;
+    padding: 1rem;
+    border-radius: .5rem;
+    width: 30rem;
+    background-color: #fff;
+}
+.header .shopping-cart.active{
+    right:2rem;
+    transition: .4s linear;
+}
+.header .shopping-cart .box{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+    position: relative;
+}
+.header .shopping-cart .box img{
+    height:6rem;
+}
+.header .shopping-cart .box .fa-trash{
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    cursor: pointer;
+    color: grey;
+    transform: translateY(-50%);
+}
+.header .shopping-cart .box .fa-trash:hover{
+    color: orangered;
+}
+.header .shopping-cart .box .content h3{
+    color: black;
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+}
+.header .shopping-cart .box .content .quantity{
+    padding-left: 1rem;
+}
+.header .shopping-cart .total{
+
+    align-items: center;
+    font-size: 2.1rem;
+    text-align: center;
+    padding: 1rem 0;
+}
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .8rem;
+    font-size: 1.5rem;
+    border-radius: .5rem;
+    border: solid black;
+    color: black;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: orangered;
+}
+.header .shopping-cart .btn{
+    display: block;
+    text-align: center;
+}
+.header .login-form{
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    width: 35rem;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: .5rem;
+    text-align: center;
+}
+.header .login-form.active{
+    right: 2rem;
+    transition: .4s linear;
+}
+
+.header .login-form h2{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: black;
+}
+.header .login-form .box{
+    margin: 2rem 0;
+    background-color: #eee;
+    border-radius: .5rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-transform: none;
+    color: black;
+}
+.header .login-form p{
+    font-size: 1.rem;
+    padding: .5rem 0;
+    color: black;
+}
+.header .login-form p a{
+    color: orangered;
+    text-decoration: underline;
+}
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(background.png);   
+    background-position:center ;
+    background-size:cover ;
+    padding-top: 17rem;
+    padding-bottom: 10rem;
+}
+.home .content{
+    text-align: center;
+    width: 60rem;
+}
+.home .content h3{
+    color: black;
+    font-size: 3rem;
+}
+.home .content h3 span{
+    color:orangered;
+    
+}
+.features .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+    gap: 2rem;
+
+}
+.features .box-container .box{
+    padding: 1rem 1rem;
+    background: #fff;
+    outline: 1px solid black;
+    outline-offset: 3px black;
+    text-align: center;
+}
+.features .box-container .box:hover{
+    outline: 3px solid black;
+    outline-offset: 0px solid black;
+    
+    
+}
+.features .box-container .box img{
+    margin: 1rem 0;
+    height: 10rem;
+    font-size: 20px;
+
+}
+.products .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+    gap: 1rem;
+
+}
+.products .box-container .box {
+    padding: 1rem 1rem;
+    background: #fff;
+    outline: 1px solid black;
+    outline-offset: 3px black;
+    text-align: center;
+    
+}
+.products .box-container .box:hover{
+    outline: 3px solid black;
+    outline-offset: 0px solid black;
+    
+    
+}
+.products .box-container .box img{
+    margin: 1rem 0;
+    height: 10rem;
+    font-size: 20px;
+
+}
+.categories .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+    gap: 1rem;
+    
+
+}
+.products1 .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+    gap: 1rem;
+
+}
+.products1 .box-container .box {
+    padding: 1rem 1rem;
+    background: #fff;
+    outline: 1px solid black;
+    outline-offset: 3px black;
+    text-align: center;
+    
+}
+.products1 .box-container .box:hover{
+    outline: 3px solid black;
+    outline-offset: 0px solid black;
+    
+    
+}
+.products1 .box-container .box img{
+    margin: 1rem 0;
+    height: 10rem;
+    font-size: 20px;
+
+}
+.products2 .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+    gap: 1rem;
+
+}
+.products2 .box-container .box {
+    padding: 1rem 1rem;
+    background: #fff;
+    outline: 1px solid black;
+    outline-offset: 3px black;
+    text-align: center;
+    
+}
+.products2 .box-container .box:hover{
+    outline: 3px solid black;
+    outline-offset: 0px solid black;
+    
+    
+}
+.products2 .box-container .box img{
+    margin: 1rem 0;
+    height: 10rem;
+    font-size: 20px;
+
+}
+.categories .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+    gap: 1rem;
+    
+
+}
+.categories .box-container .box{
+    padding: 1rem 1rem;
+    background: #fff;
+    outline: 1px solid black;
+    outline-offset: 3px black;
+    text-align: center;
+}
+.categories .box-container .box:hover{
+    outline: 3px solid black;
+    outline-offset: 0px solid black;
+    
+    
+}
+.categories .box-container .box img{
+    margin: 1rem 0;
+    height: 10rem;
+    font-size: 20px;
+
+}
+.review .review-slider{
+    padding: 1rem;
+}
+.review .review-slider .box{
+    background: #fff;
+    border-radius: 0rem;
+    text-align: center;
+    padding: 3rem 2rem;
+    outline: 1px solid black;
+    outline-offset: 3px grey;
+    
+    transition: .2s linear;
+}
+.review .review-slider .box:hover{
+    outline: 3px solid black;
+    outline-offset: 0px solid grey;
+    
+
+}
+.review .review-slider .box img{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+}
+.review .review-slider .box p{
+    padding: 1rem 0;
+    line-height: 1.7;
+    font-size: 1.5rem;
+}
+.review .review-slider .box h3{
+    padding-bottom: .5rem;
+    color: black;
+    font-size: 2rem;
+}
+.review .review-slider .box .stars{
+    color: orangered;
+    font-size: 1.7rem;
+
+}
+.footer{
+
+    background-color: #fff;
+}
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(10rem,1fr));
+    gap: 1rem;
+}
+.footer .box-container .box h3{
+    font-size: 2rem;
+    color: black;
+    padding: 1rem 0;
+
+}
+.footer .box-container .box h3   i{
+    color: orangered;
+}
+.footer .box-container .box  a   i{
+    color: orangered;
+}
+.footer .box-container .box a i:hover{
+    padding-right: 2rem;
+}
+.footer .box-container .box a{
+   display: block;
+   font-size: 1.4rem;
+   padding: 1rem 0;
+}
+.footer .box-container .box .shares a{
+    height: 4rem;
+    width: 4rem;
+    line-height: 3rem;
+    border-radius: .5rem;
+    color: black;
+    margin-right: 2rem;
+    text-align: center;
+}
+.footer .box-container .box a.links{
+    color: black;
+    font-size: 1rem;
+}
+.footer .box-container .box .email{
+    margin: .5rem 0;
+    width: 100%;
+    border: 2px solid black;
+    padding: 10px;
+    font-size:1.2rem;
+    
+    background-color: #eee;
+    border-radius: .5rem;
+}
+.footer .box-container .box .email:hover{
+    font-weight: bolder;
+}
+.footer .box-container .box .btn{
+    margin-bottom:2rem;
+}
+
+
+
+
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    .header{
+        padding: 2rem;
+    }
+    .header .shopping-cart{
+        width: 50%;
+    }
+    .footer .box-container .box .email{
+        width: 100%;
+    }
+}
+@media (max-width:768px){
+    #menu-btn{
+        display:inline-block;
+    }
+    .header .shopping-cart{
+        width: 90%;
+    }
+    .footer .box-container .box .email{
+        width: 100%;
+    }
+    
+    .header .navbar{
+        position: absolute;
+        top: 110%;
+        right:-110%;
+        width: 30rem;
+        border-radius: .5rem;
+        background-color: #fff;
+
+    }
+    .header .navbar.active{
+        right: 2rem;
+        transition: .4s linear;
+
+    }
+
+    .header .navbar a{
+        font-size: 2rem;
+        margin: 2.5rem 2rem;
+        display: block;
+    }
+}
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+    .footer .box-container .box .email{
+        width: 100%;
+    }
+}
